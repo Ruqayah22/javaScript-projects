@@ -26,5 +26,10 @@ background: linear-gradient(
 
 - .toggle('completed') does two things: If the completed class is not already applied to the element, toggle adds it. If the completed class is already applied, toggle removes it.
 
+## Used in it : 
+- html
+- CSS 
+- JavaScript
+
 
 
