@@ -75,4 +75,11 @@ submit.value='SEND';
 ```
 >now even though there's two inputs on the page because this this button this is actually an input as well it only grabbed the first one okay so it's going to grab the first one by default now with query selector we can use any css selector so what i'm going to do now is i'm going to say var submit and let's set this to document dot query selector and instead of just input let's use the input and then brackets and we can say the type equals submit okay just like we could do in css this should actually be in quotes though all right so if we do that and then we say submit dot value and let's see we'll change it to send and save and now you can see we've actually changed the button to send.
 
+### note 
+> so you can see you can select anything you want and you can do whatever you want with it with JavaScript you don't need jQuery I know I sound very anti jQuery I just think that like I said the analogy that I like is is using a sledgehammer to kill a mosquito you don't need it it'll work but you don't need it and it adds that extra it adds that extra file to your to your page and slows just slows you down that much now don't get me wrong there's there's a lot of really nice jQuery plugins for things like you know hardcore animation like when you scroll down a page and you want certain things to pop out at certain spots I mean you can do that kind of stuff in JavaScript but there are really nice jQuery plugins that will save you a lot of time and it's a lot less code so I'm not saying don't use jQuery for anything I'm just saying for simple Dom manipulation there's really no need for it.
+
+### creating Dom elements from JavaScript and inserting them 
+
+create element 
+`document.createElement('div')`
 
