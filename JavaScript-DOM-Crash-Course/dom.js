@@ -5,7 +5,7 @@
 // console.log(document.domain);
 // console.log(document.URL);
 // console.log(document.title);
-// // document.title = 123; // change the title 
+// // document.title = 123; // change the title
 // console.log(document.doctype);
 // console.log(document.head);
 // console.log(document.body);
@@ -49,7 +49,7 @@
 
 // for (var i = 0; i < items.length; i++) {
 //     items[i].style.backgroundColor = '#f4f4f4';
-    
+
 // }
 
 // 3. get elements by tag name //
@@ -65,9 +65,8 @@
 
 // for (var i = 0; i < li.length; i++) {
 //     li[i].style.backgroundColor = '#f4f4f4';
-    
-// }
 
+// }
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -83,7 +82,7 @@
 // submit.value='SEND';
 
 // var item = document.querySelector('.list-group-item');
-// item.style.color = 'red'  // change the first one only 
+// item.style.color = 'red'  // change the first one only
 
 // var lastItem = document.querySelector(".list-group-item:last-child");
 // lastItem.style.color = 'blue'
@@ -110,18 +109,18 @@
 
 // TRAVERSING THE DOM //
 
-var itemList = document.querySelector('#items');
-// parentNode 
+var itemList = document.querySelector("#items");
+// parentNode
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentNode.parentNode.parentNode);
- 
+
 // parentElement
 // console.log(itemList.parentElement);
 // itemList.parentElement.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentElement.parentElement.parentElement);
- 
-// childNode 
+
+// childNode
 // console.log(itemList.childNodes);
 
 // console.log(itemList.children);
@@ -153,42 +152,131 @@ var itemList = document.querySelector('#items');
 
 //  creating Dom elements from JavaScript and inserting them //
 
-// create Element 
+// // create Element
 
-// create div 
-var newDiv = document.createElement('div');
+// // create div
+// var newDiv = document.createElement('div');
 
-// add class 
-newDiv.className = 'hello';
+// // add class
+// newDiv.className = 'hello';
 
-// add id 
-newDiv.id = 'hello1';
+// // add id
+// newDiv.id = 'hello1';
 
-// add attributes
-newDiv.setAttribute('title', 'hello div');
+// // add attributes
+// newDiv.setAttribute('title', 'hello div');
 
-// create text node 
-var newDivText = document.createTextNode('hello world');
+// // create text node
+// var newDivText = document.createTextNode('hello world');
 
-// add text to div 
-newDiv.appendChild(newDivText);
+// // add text to div
+// newDiv.appendChild(newDivText);
 
-// add the div to the dom, now it in the javaScript 
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
+// // add the div to the dom, now it in the javaScript
+// var container = document.querySelector('header .container');
+// var h1 = document.querySelector('header h1');
 
-console.log(newDiv);
+// console.log(newDiv);
 
-newDiv.style.fontSize = '30px';
+// newDiv.style.fontSize = '30px';
 
-container.insertBefore(newDiv, h1); // newDiv -> what we want to add, h1 -> before what we want to add it 
+// container.insertBefore(newDiv, h1); // newDiv -> what we want to add, h1 -> before what we want to add it
 
+/////////////////////////////////////////////////////////////////
+// Event //
 
+// var button =document.getElementById('button').addEventListener('click', function(){
+//     console.log(123);
 
+// })
+// var button = document
+//   .getElementById("button")
+//   .addEventListener("click", buttonClick);
 
+// function buttonClick(e) {
+//   //   console.log("button Clicked");
+//   // document.getElementById('header-title').textContent = 'Changed';
+//   // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+//   // console.log(e);
+//   // console.log(e.target);
+//   // console.log(e.target.id);
+//   // console.log(e.target.className);
+//   // console.log(e.target.value);
+//   //   console.log(e.target.classList);
+//   // var output = document.getElementById('output');
+//   // output.innerHTML = '<h3>'+e.target.id+'</h3>'
+//   // console.log(e.type);
+//   //   console.log(e.clientX);
+//   //   console.log(e.clientY);
 
+// //   console.log(e.offsetX);
+// //   console.log(e.offsetY);
 
+// // console.log(e.altKey);
+// // console.log(e.ctrlKey);
+// // console.log(e.shiftKey);
+ 
+// }
 
+var button = document
+  .getElementById("button");
+  
+  var box = document.getElementById('box')
 
+  // click event
+
+// button.addEventListener("click", runEvent);
+// button.addEventListener("dblclick", runEvent);
+
+// mouse event
+
+// button.addEventListener("mousedown", runEvent);
+// button.addEventListener("mouseup", runEvent);
+
+// box.addEventListener("mouseenter", runEvent);
+// box.addEventListener("mouseleave", runEvent);
+
+// box.addEventListener("mouseover", runEvent);
+// box.addEventListener("mouseout", runEvent);
+
+// box.addEventListener("mousemove", runEvent);
+
+var itemInput = document.querySelector('input[type="text"]');
+var form = document.querySelector('form');
+
+var select = document.querySelector('select')
+
+// itemInput.addEventListener("keydown", runEvent);
+// itemInput.addEventListener("keyup", runEvent);
+// itemInput.addEventListener("keypress", runEvent);
+
+// itemInput.addEventListener("focus", runEvent);
+// itemInput.addEventListener("blur", runEvent);
+
+// itemInput.addEventListener("cut", runEvent);
+// itemInput.addEventListener("paste", runEvent);
+
+// itemInput.addEventListener("input", runEvent);
+
+// select.addEventListener('change', runEvent);
+// select.addEventListener("input", runEvent);
+
+form.addEventListener('submit', runEvent)
+
+  function runEvent(e){
+    e.preventDefault();
+    console.log('EVENT TYPE: ' + e.type);
+    
+    // document.body.style.display ='none'
+
+    // console.log(e.target.value);
+    // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>'
+    
+    // output.innerHTML= '<h3> MouseX: '+e.offsetX+' </h3><h3>MouseY:' +e.offsetY+'</h3>';
+
+    // box.style.backgroundColor ="rgb("+e.offsetX+","+e.offsetY+",40)";
+    // document.body.style.backgroundColor = "rgb(" + e.offsetX + "," + e.offsetY + ",40)";
+
+  }
 
 
