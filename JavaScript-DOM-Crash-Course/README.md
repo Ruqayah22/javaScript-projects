@@ -103,7 +103,7 @@ create element
 
 > the position of the mouse. get the position on the x axis when it's clicked. so the client X is actually the position from the with the browser window.
 
-`  console.log(e.clientY);`
+`console.log(e.clientY);`
 
 > client Y that's gonna be from the wind from the top down ok .
 
@@ -146,5 +146,16 @@ itemInput.addEventListener("blur", runEvent);
 ```
 > you click in we get focus we click out we get blur. 
 
-``
-> click the submit button and notice that nothing's happening actually you can see a blink down there see if I keep clicking it'll blink real quick that's because it's actually submitting to the page okay it's just working like a regular HTML form in order for it not to do that you have to prevent that from happening and the way that you do that is you take this event parameter that's passed in and you call a dot prevent default okay which is a function that's going to stop that from happening.
+`e.preventDefault();`
+> click the submit button and notice that nothing's happening actually you can see a blink down there see if I keep clicking it'll blink real quick that's because it's actually submitting to the page okay it's just working like a regular HTML form in order for it not to do that you have to prevent that from happening and the way that you do that is you take this event parameter that's passed in and you call a dot prevent default okay which is a function that's going to stop that from happening. **when we submit a form we have to stop the prevent behavior of the the initial behavior we have to prevent it**
+
+### very important 
+
+[Final Project](https://www.youtube.com/watch?v=i37KVt_IcXw&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=6)
+
+``` 
+var li = e.target.parentElement;
+itemList.removeChild(li);
+```
+
+> we want the parent element which is the Li ok doing you know hopefully you can understand that that's why we're using parent element because we're clicking on the button we want the the parent Li and then what we want to do is just remove the child of the item list so the item list is the UL 
