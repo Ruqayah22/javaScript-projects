@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <!-- <script src="https://unpkg.com/qrcode/build/qrcode.min.js"></script> -->
+
+</head>
+<body>
+    <div id="qrcode"></div>
+    <!-- <script>
+        console.log("QRCode library loaded:", QRCode); // Check if QRCode is available
+
+        const url = "https://google.com";  // Simple test URL
+        console.log("URL:", url);  // Check the URL
+
+        // Test QR code generation with simple data
+        QRCode.toCanvas(document.getElementById('qrcode'), "Hello World", function (error) {
+            if (error) {
+                console.error("Error generating QR Code:", error);
+            } else {
+                console.log('QR Code generated!');
+            }
+        });
+    </script> -->
+<!-- <script>
+    const url = "https://google.com";  // Simple test URL
+
+    console.log("URL:", url);  // Check the URL
+
+    // Use the default export of the QRCode object when calling toCanvas
+    QRCode.default.toCanvas(document.getElementById('qrcode'), url, function (error) {
+        if (error) {
+            console.error("Error generating QR Code:", error);
+        } else {
+            console.log('QR Code generated!');
+        }
+    });
+</script> -->
+
+<script>
+    const url = "https://www.instagram.com/pycode.hubb?igsh=cDVxZXI4NDF2ZmN0" //"https://google.com";  // Simple test URL
+
+    console.log("URL:", url);  // Check the URL
+
+    // Use toDataURL to generate QR code as a data URL
+    QRCode.default.toDataURL(url, function (error, urlData) {
+        if (error) {
+            console.error("Error generating QR Code:", error);
+        } else {
+            console.log('QR Code generated!');
+
+            // Create an image element to display the QR code
+            const imgElement = document.createElement('img');
+            imgElement.src = urlData;
+            document.body.appendChild(imgElement);  // Append the QR code image to the body
+        }
+    });
+</script>
+
+
+</body>
+</html>
